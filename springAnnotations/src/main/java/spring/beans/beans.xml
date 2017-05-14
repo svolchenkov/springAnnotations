@@ -11,12 +11,10 @@
 	<bean id="logger" class="springAnnotations.Logger"></bean>
 	<context:annotation-config></context:annotation-config>
 	<bean id="consoleWritter" class="springAnnotations.ConsoleWritter"></bean>
-	<bean id="secondConsoleWritter"
-		class="springAnnotations.ConsoleWritter">
+	<bean id="secondConsoleWritter" class="springAnnotations.ConsoleWritter">
 		<qualifier value="secondConsole"></qualifier>
 	</bean>
-	<bean id="thirdConsoleWritter"
-		class="springAnnotations.ConsoleWritter">
+	<bean id="thirdConsoleWritter" class="springAnnotations.ConsoleWritter">
 		<qualifier value="thirdConsole"></qualifier>
 	</bean>
 </beans>

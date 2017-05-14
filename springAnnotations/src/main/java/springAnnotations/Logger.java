@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ImportResource;
 
 import javax.annotation.Resource;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class Logger {
 
@@ -43,4 +45,14 @@ public class Logger {
 		consoleWritter.write("try write text");
 	}
 
+	@PostConstruct
+	public void init() {
+		System.out.println("+++ init was called");
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("+++ destroy was called");
+	}
+	
 }
